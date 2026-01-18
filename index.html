@@ -1,53 +1,173 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3dForge.studio | Precision 3D Printing & CAD Design</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Forge | Premium CAD & 3D Printing</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              'infinity-blue': '#0E1428',
-              'accent-cyan': '#38BDF8',
-              'accent-cyan-dark': '#0EA5E9',
-            },
-            fontFamily: {
-              sans: ['Poppins', 'sans-serif'],
-            }
-          }
-        }
-      }
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-      html {
-        scroll-behavior: smooth;
-      }
-      body {
-        background-color: #0E1428;
-        font-family: 'Poppins', 'sans-serif';
-      }
+        :root {
+            --infinity-blue: #001f3f;
+            --walnut-brown: #966F33;
+            --walnut-light: #b08d57;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--infinity-blue);
+            color: #ffffff;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3, .logo-font {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .walnut-bg {
+            background-color: var(--walnut-brown);
+            color: #1a1a1a;
+        }
+        .btn-walnut {
+            background-color: var(--walnut-brown);
+            transition: all 0.3s ease;
+        }
+        .btn-walnut:hover {
+            background-color: var(--walnut-light);
+            transform: translateY(-2px);
+        }
+        .nav-glass {
+            background: rgba(0, 31, 63, 0.8);
+            backdrop-filter: blur(10px);
+        }
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
 </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
-  </body>
+<body>
+
+    <nav class="fixed w-full z-50 nav-glass border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="logo-font text-2xl font-bold tracking-tighter">
+                3D<span class="text-[#966F33]">FORGE</span>
+            </div>
+            <div class="hidden md:flex space-x-10 text-sm uppercase tracking-widest font-medium">
+                <a href="#services" class="hover:text-[#966F33] transition">Services</a>
+                <a href="#workflow" class="hover:text-[#966F33] transition">Workflow</a>
+                <a href="#contact" class="hover:text-[#966F33] transition">Contact</a>
+            </div>
+            <a href="#contact" class="btn-walnut text-white px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest shadow-lg">
+                Get a Quote
+            </a>
+        </div>
+    </nav>
+
+    <header class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=2000" class="w-full h-full object-cover opacity-20 grayscale" alt="3D Printing background">
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-[#966F33] font-bold tracking-[0.3em] text-xs uppercase mb-4 block">Precision Engineered</span>
+                <h1 class="text-6xl md:text-8xl font-bold leading-none mb-6 tracking-tighter">
+                    FORGE THE <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-[#966F33] to-[#d4a373]">IMPOSSIBLE.</span>
+                </h1>
+                <p class="text-lg text-slate-300 mb-8 max-w-md font-light leading-relaxed">
+                    High-performance CAD design and 3D printing services for startups, engineers, and creators.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#contact" class="btn-walnut px-8 py-4 rounded-md font-bold text-sm uppercase">Start Project</a>
+                    <a href="#services" class="border border-white/30 px-8 py-4 rounded-md font-bold text-sm uppercase hover:bg-white/5 transition">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="services" class="walnut-bg py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <h2 class="text-5xl md:text-7xl font-bold tracking-tighter">OUR SERVICES</h2>
+                <p class="max-w-sm font-medium opacity-80 uppercase text-sm tracking-wider">
+                    From napkin sketches to industrial-grade functional prototypes.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white/10 p-10 rounded-2xl border border-black/5">
+                    <h3 class="text-2xl font-bold mb-4 uppercase">CAD Design</h3>
+                    <p class="opacity-70 text-sm leading-relaxed mb-6">Expert 3D modeling using SolidWorks and Fusion360. We optimize your designs for manufacturability and cost.</p>
+                </div>
+                <div class="bg-white/10 p-10 rounded-2xl border border-black/5">
+                    <h3 class="text-2xl font-bold mb-4 uppercase">Industrial 3D Printing</h3>
+                    <p class="opacity-70 text-sm leading-relaxed mb-6">FDM and SLA capabilities. We print in everything from tough ABS to high-detail resins and carbon-fiber composites.</p>
+                </div>
+                <div class="bg-white/10 p-10 rounded-2xl border border-black/5">
+                    <h3 class="text-2xl font-bold mb-4 uppercase">Rapid Prototyping</h3>
+                    <p class="opacity-70 text-sm leading-relaxed mb-6">Need it yesterday? Our rapid-response system ensures your prototype is in your hands within 48-72 hours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="workflow" class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-16 text-center tracking-tighter uppercase">How it works</h2>
+            
+            <div class="grid md:grid-cols-4 gap-4">
+                <div class="p-8 border border-white/10 rounded-xl hover:border-[#966F33] transition group">
+                    <div class="text-4xl font-bold text-white/10 group-hover:text-[#966F33] transition mb-4">01</div>
+                    <h4 class="font-bold mb-2 uppercase">Analyze</h4>
+                    <p class="text-sm text-slate-400">Upload your STL/STEP files or sketches for a technical review.</p>
+                </div>
+                <div class="p-8 border border-white/10 rounded-xl hover:border-[#966F33] transition group">
+                    <div class="text-4xl font-bold text-white/10 group-hover:text-[#966F33] transition mb-4">02</div>
+                    <h4 class="font-bold mb-2 uppercase">Optimize</h4>
+                    <p class="text-sm text-slate-400">Our engineers refine the geometry for the best print quality.</p>
+                </div>
+                <div class="p-8 border border-white/10 rounded-xl hover:border-[#966F33] transition group">
+                    <div class="text-4xl font-bold text-white/10 group-hover:text-[#966F33] transition mb-4">03</div>
+                    <h4 class="font-bold mb-2 uppercase">Forge</h4>
+                    <p class="text-sm text-slate-400">Printing begins using high-fidelity industrial hardware.</p>
+                </div>
+                <div class="p-8 border border-white/10 rounded-xl hover:border-[#966F33] transition group">
+                    <div class="text-4xl font-bold text-white/10 group-hover:text-[#966F33] transition mb-4">04</div>
+                    <h4 class="font-bold mb-2 uppercase">Ship</h4>
+                    <p class="text-sm text-slate-400">Post-processing and quality check followed by overnight delivery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="walnut-bg py-24">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-5xl font-bold tracking-tighter uppercase mb-4">Ready to Build?</h2>
+                <p class="font-medium opacity-70">Fill out the form below for a free project estimate.</p>
+            </div>
+            
+            <form class="space-y-4">
+                <div class="grid md:grid-cols-2 gap-4">
+                    <input type="text" placeholder="Full Name" class="w-full p-4 bg-black/5 border border-black/10 rounded-md focus:outline-none focus:border-black placeholder:text-black/40">
+                    <input type="email" placeholder="Email Address" class="w-full p-4 bg-black/5 border border-black/10 rounded-md focus:outline-none focus:border-black placeholder:text-black/40">
+                </div>
+                <select class="w-full p-4 bg-black/5 border border-black/10 rounded-md focus:outline-none focus:border-black">
+                    <option>Select Service Type</option>
+                    <option>3D Printing</option>
+                    <option>CAD Modeling</option>
+                    <option>Full Product Development</option>
+                </select>
+                <textarea rows="4" placeholder="Tell us about your project requirements..." class="w-full p-4 bg-black/5 border border-black/10 rounded-md focus:outline-none focus:border-black placeholder:text-black/40"></textarea>
+                <button type="submit" class="w-full bg-black text-white font-bold py-5 rounded-md uppercase tracking-widest hover:bg-zinc-900 transition shadow-xl">
+                    Submit Request
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="logo-font text-xl font-bold mb-4">3D<span class="text-[#966F33]">FORGE</span></div>
+            <p class="text-xs text-slate-500 tracking-[0.4em] uppercase">© 2026 3D Forge | Precision Additive Manufacturing</p>
+        </div>
+    </footer>
+
+</body>
 </html>
